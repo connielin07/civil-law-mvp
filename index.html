@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>18歲前必懂的民法知識</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="topbar" aria-label="主要導覽">
+      <a class="brand" href="#home">民法18+</a>
+      <div class="top-links">
+        <a href="#cards">知識卡</a>
+        <a href="#quiz">情境測驗</a>
+        <a href="#result">結果</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <div>
+        <p class="eyebrow">高中生生活法律入門</p>
+        <h1>18歲前必懂的民法知識</h1>
+        <p class="hero-text">滿18歲後，你可以自己做更多決定：簽約、租屋、打工、分期付款。但自由變多，也代表要更懂自己的權利和責任。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#cards">開始學習</a>
+          <a class="btn ghost" href="#quiz">直接測驗</a>
+        </div>
+      </div>
+      <aside class="progress-card" aria-live="polite">
+        <span class="mini-label">目前進度</span>
+        <strong id="progressTitle">0 / 6 張卡完成</strong>
+        <div class="progress-bar" aria-hidden="true"><span id="progressFill"></span></div>
+        <p id="quizStatus">尚未完成測驗</p>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <h2>這不是考試，是讓你少踩坑的生活指南</h2>
+      <p>內容以法務部《民法成年指南》的主題為參考，改寫成日常情境。這個 MVP 先做可展示版本，適合用來介紹概念，不取代正式法律諮詢。</p>
+    </section>
+
+    <section class="section" id="cards">
+      <div class="section-heading">
+        <p class="eyebrow">Knowledge Cards</p>
+        <h2>6 個必懂知識卡片</h2>
+      </div>
+      <div class="cards-grid" id="cardsGrid"></div>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <div class="section-heading">
+        <p class="eyebrow">Scenario Quiz</p>
+        <h2>情境測驗</h2>
+        <p>選出你覺得最合理的做法，看看自己是否真的理解。</p>
+      </div>
+      <div class="quiz-card">
+        <div class="quiz-meta">
+          <span id="questionCounter">第 1 題 / 共 5 題</span>
+          <span id="scorePreview">目前答對 0 題</span>
+        </div>
+        <h3 id="questionText"></h3>
+        <div id="options" class="options"></div>
+        <div id="feedback" class="feedback" hidden></div>
+        <button class="btn primary full" id="nextBtn" disabled>下一題</button>
+      </div>
+    </section>
+
+    <section class="section result-section" id="result">
+      <div class="result-card">
+        <p class="eyebrow">Result</p>
+        <h2 id="resultTitle">完成測驗後會顯示結果</h2>
+        <p id="resultText">先看知識卡或直接挑戰情境測驗都可以。</p>
+        <div class="result-stats">
+          <div><strong id="resultScore">—</strong><span>測驗分數</span></div>
+          <div><strong id="resultCards">0 / 6</strong><span>卡片進度</span></div>
+        </div>
+        <div class="result-actions">
+          <button class="btn primary" id="retryBtn">重新測驗</button>
+          <a class="btn ghost" href="#cards">回到知識卡</a>
+          <button class="btn danger" id="clearBtn">清除進度</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>資料參考：法務部《民法成年指南》主題。內容為學習用改寫，非個案法律意見。</p>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="手機導覽">
+    <a href="#home">首頁</a>
+    <a href="#cards">知識</a>
+    <a href="#quiz">測驗</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
