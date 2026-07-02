@@ -19,5 +19,11 @@ python -m http.server 8000
 
 然後開啟 http://localhost:8000
 
+或直接用瀏覽器打開：
+
+```txt
+C:\Users\Hermes\civil-law-mvp\index.html
+```
+
 ## 資料來源
 內容參考法務部《民法成年指南》相關主題，已改寫成高中生容易理解的語氣。此 MVP 為法治教育展示用，不構成法律意見。
